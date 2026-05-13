@@ -26,30 +26,7 @@ function Home({ setCart }) {
    image: "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg"
   }
 ];
-const handlePayment = (amount) => {
-  const options = {
-    key: "YOUR_RAZORPAY_KEY_ID", // (abhi demo key dalna hai)
-    amount: amount * 100, // paise me convert
-    currency: "INR",
-    name: "E-Commerce Store",
-    description: "Product Purchase",
-    handler: function (response) {
-      alert("Payment Successful ✔");
-      console.log(response);
-    },
-    prefill: {
-      name: "Customer",
-      email: "test@gmail.com",
-      contact: "9999999999"
-    },
-    theme: {
-      color: "#3399cc"
-    }
-  };
 
-  const rzp = new window.Razorpay(options);
-  rzp.open();
-};
   return (
     <div>
         <div style={{ textAlign: "center", marginBottom: "30px" }}>
